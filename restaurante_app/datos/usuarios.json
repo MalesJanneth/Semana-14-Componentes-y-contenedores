@@ -1,0 +1,44 @@
+[
+    {
+        "identificacion": "10046",
+        "nombre": "Talia",
+        "correo": "talia@",
+        "usuario": "talia",
+        "contrasena": "1234"
+    },
+    {
+        "identificacion": "10047",
+        "nombre": "Jeff",
+        "correo": "jeff@",
+        "usuario": "jeff",
+        "contrasena": "1234"
+    },
+    {
+        "identificacion": "10048",
+        "nombre": "Mercedes",
+        "correo": "merce@",
+        "usuario": "mercedes",
+        "contrasena": "1234"
+    },
+    {
+        "identificacion": "10049",
+        "nombre": "Humberto",
+        "correo": "humber@",
+        "usuario": "humberto",
+        "contrasena": "1234"
+    },
+    {
+        "identificacion": "10050",
+        "nombre": "Paulina",
+        "correo": "pau@",
+        "usuario": "paulina",
+        "contrasena": "1234"
+    },
+    {
+        "identificacion": "10051",
+        "nombre": "Daniel",
+        "correo": "daniel@",
+        "usuario": "daniel",
+        "contrasena": "1234"
+    }
+]
