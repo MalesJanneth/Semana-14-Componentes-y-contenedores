@@ -2,11 +2,9 @@
 
 **Estudiante:** Janneth Talía Males Conejo
 
-## Objetivo
+## Propósito
 
-Esta versión de `restaurante_app` mejora la interfaz gráfica desarrollada anteriormente utilizando **Tkinter y ttk**.
-
-En esta etapa se trabajan **componentes y contenedores** para organizar mejor la interfaz y facilitar la gestión de usuarios y productos.
+En la Semana 14 se mejora la aplicación `restaurante_app` mediante una interfaz gráfica desarrollada con **Tkinter y ttk**. Se organizan los elementos utilizando componentes y contenedores para mejorar la presentación y el uso de la aplicación.
 
 ## Estructura del proyecto
 
@@ -31,53 +29,53 @@ En esta etapa se trabajan **componentes y contenedores** para organizar mejor la
     ├── main.py
     └── README.md
 
-## Componentes y responsabilidades
+## Componentes y contenedores
 
-- **Modelos:** representan los productos y usuarios del restaurante.
-- **ArchivoServicio:** se encarga de leer y guardar la información en archivos JSON.
-- **RestauranteServicio:** contiene las operaciones y validaciones del restaurante.
-- **LoginView:** permite ingresar usuario y contraseña.
-- **MainView:** permite consultar usuarios y gestionar productos.
-- **main.py:** crea la ventana principal y coordina las vistas.
+Se utilizan componentes de **Tkinter y ttk**, entre ellos:
 
-## Funcionalidades
+- `Frame`
+- `LabelFrame`
+- `Label`
+- `Entry`
+- `Button`
+- `Checkbutton`
+- `Treeview`
+- `Scrollbar`
 
-- Inicio de sesión.
-- Consulta de usuarios.
-- Registro de productos.
-- Consulta de productos por código.
-- Actualización de productos.
-- Eliminación de productos.
-- Persistencia de datos mediante archivos JSON.
+Los contenedores permiten organizar el formulario de productos, los botones y las tablas de información.
 
-## Interfaz gráfica
+## Mejoras realizadas
 
-Se utilizan componentes de **Tkinter y ttk**, como `Frame`, `LabelFrame`, `Entry`, `Button`, `Checkbutton`, `Treeview` y `Scrollbar`.
+- Organización de la interfaz mediante contenedores.
+- Separación del formulario y la presentación de información.
+- Uso de tablas para consultar usuarios y productos.
+- Uso de botones para ejecutar las operaciones.
+- Actualización de la información después de realizar cambios.
+- Interfaz más ordenada y fácil de utilizar.
 
-Los componentes se organizan mediante contenedores para separar formularios, botones y tablas de información.
+## Operaciones sobre productos
 
-## Flujo de la aplicación
+La aplicación permite:
 
-    Inicio
-       ↓
-    main.py
-       ↓
-    LoginView
-       ↓
-    RestauranteServicio valida el acceso
-       ↓
-    MainView
-       ↓
-    Usuarios | Productos
-       ↓
-    Operaciones de productos
-       ↓
-    Cerrar sesión
+- Registrar productos.
+- Consultar productos por código.
+- Actualizar productos.
+- Eliminar productos.
+- Consultar los productos registrados.
+
+## Persistencia
+
+La información se almacena en archivos **JSON** ubicados en la carpeta `datos`.
+
+`ArchivoServicio` se encarga de la lectura y escritura de los archivos, mientras que `RestauranteServicio` gestiona las operaciones de la aplicación.
 
 ## Ejecución
 
-Desde la carpeta del proyecto ejecutar:
+Para ejecutar el proyecto:
+
+1. Abrir PowerShell en la carpeta del proyecto.
+2. Ejecutar el siguiente comando:
 
     python restaurante_app/main.py
 
-La aplicación inicia mostrando la pantalla de inicio de sesión. Después de ingresar credenciales válidas, se pueden consultar usuarios y realizar las operaciones de registro, consulta, actualización y eliminación de productos.
+La aplicación inicia con la pantalla de inicio de sesión y, después de ingresar correctamente, permite acceder a las funciones principales.
