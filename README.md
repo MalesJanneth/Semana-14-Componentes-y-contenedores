@@ -1,12 +1,12 @@
-# Restaurante App - Semana 13
+# Restaurante App - Semana 14
 
 **Estudiante:** Janneth Talía Males Conejo
 
 ## Objetivo
 
-Esta versión de `restaurante_app` representa la transición de una aplicación de consola a una interfaz gráfica utilizando **Tkinter**.
+Esta versión de `restaurante_app` mejora la interfaz gráfica desarrollada anteriormente utilizando **Tkinter y ttk**.
 
-En esta etapa se trabaja únicamente con la información básica de **usuarios y productos**. La funcionalidad de ventas queda pendiente para una semana posterior.
+En esta etapa se trabajan **componentes y contenedores** para organizar mejor la interfaz y facilitar la gestión de usuarios y productos.
 
 ## Estructura del proyecto
 
@@ -26,37 +26,53 @@ En esta etapa se trabaja únicamente con la información básica de **usuarios y
     │   ├── __init__.py
     │   ├── login_view.py
     │   └── main_view.py
+    ├── assets/
+    │   └── logo/
     ├── main.py
     └── README.md
 
-## Responsabilidades
+## Componentes y responsabilidades
 
 - **Modelos:** representan los productos y usuarios del restaurante.
-- **ArchivoServicio:** se encarga de leer la información almacenada en archivos JSON.
-- **RestauranteServicio:** carga los datos y proporciona las operaciones de validación y consulta utilizadas por la interfaz.
-- **LoginView:** permite ingresar usuario y contraseña y muestra mensajes cuando los datos son incorrectos.
-- **MainView:** muestra la información de productos y usuarios después de iniciar sesión. La opción de ventas se encuentra pendiente.
-- **main.py:** crea la ventana principal de Tkinter, prepara los servicios y coordina el cambio entre las vistas.
+- **ArchivoServicio:** se encarga de leer y guardar la información en archivos JSON.
+- **RestauranteServicio:** contiene las operaciones y validaciones del restaurante.
+- **LoginView:** permite ingresar usuario y contraseña.
+- **MainView:** permite consultar usuarios y gestionar productos.
+- **main.py:** crea la ventana principal y coordina las vistas.
+
+## Funcionalidades
+
+- Inicio de sesión.
+- Consulta de usuarios.
+- Registro de productos.
+- Consulta de productos por código.
+- Actualización de productos.
+- Eliminación de productos.
+- Persistencia de datos mediante archivos JSON.
+
+## Interfaz gráfica
+
+Se utilizan componentes de **Tkinter y ttk**, como `Frame`, `LabelFrame`, `Entry`, `Button`, `Checkbutton`, `Treeview` y `Scrollbar`.
+
+Los componentes se organizan mediante contenedores para separar formularios, botones y tablas de información.
 
 ## Flujo de la aplicación
 
     Inicio
-      ↓
+       ↓
     main.py
-      ↓
+       ↓
     LoginView
-      ↓
-    Usuario y contraseña
-      ↓
+       ↓
     RestauranteServicio valida el acceso
-      ↓
+       ↓
     MainView
-      ↓
-    Productos | Usuarios | Ventas (pendiente)
-      ↓
+       ↓
+    Usuarios | Productos
+       ↓
+    Operaciones de productos
+       ↓
     Cerrar sesión
-      ↓
-    LoginView
 
 ## Ejecución
 
@@ -64,4 +80,4 @@ Desde la carpeta del proyecto ejecutar:
 
     python restaurante_app/main.py
 
-La aplicación inicia mostrando la pantalla de inicio de sesión. Después de ingresar credenciales válidas, se puede consultar la información registrada de productos y usuarios.
+La aplicación inicia mostrando la pantalla de inicio de sesión. Después de ingresar credenciales válidas, se pueden consultar usuarios y realizar las operaciones de registro, consulta, actualización y eliminación de productos.
