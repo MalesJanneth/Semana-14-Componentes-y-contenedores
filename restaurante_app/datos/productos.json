@@ -52,7 +52,15 @@
         "nombre": "Milkshake",
         "categoria": "Bebida",
         "precio": 2.0,
-        "stock": 0,
+        "stock": 3,
+        "disponible": true
+    },
+    {
+        "codigo": "08",
+        "nombre": "Gelatina",
+        "categoria": "Postre",
+        "precio": 1.0,
+        "stock": 4,
         "disponible": true
     }
 ]

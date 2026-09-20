@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 
-
 class MainView(tk.Frame):
     def __init__(
         self,
@@ -77,13 +76,14 @@ class MainView(tk.Frame):
         )
         cuerpo.pack(fill="both", expand=True)
 
+
         menu = tk.Frame(
-            cuerpo,
-            bg="#ffffff",
-            width=170,
-            padx=12,
-            pady=15
-        )
+        cuerpo,
+        bg="#ffffff",
+        width=170,
+        padx=12,
+        pady=15
+    )
         menu.pack(
             side="left",
             fill="y",
@@ -488,8 +488,6 @@ class MainView(tk.Frame):
             pady=5
         )
 
-        self.disponible_var = tk.BooleanVar(value=True)
-
         ttk.Checkbutton(
             formulario,
             text="Producto disponible",
@@ -673,14 +671,11 @@ class MainView(tk.Frame):
         datos = self.obtener_datos_producto()
 
         try:
-            self.restaurante_servicio.registrar_producto(
-                *datos
-            )
+            self.restaurante_servicio.registrar_producto(*datos)
 
             messagebox.showinfo(
                 "Producto registrado",
-                "El producto se registró correctamente."
-            )
+                "El producto se registró correctamente.")
 
             self.limpiar_formulario()
             self.refrescar_productos()

@@ -39,8 +39,7 @@ class LoginView(tk.Frame):
         if not ruta_logo.exists():
             return None
 
-        logo_original = tk.PhotoImage(file=str(ruta_logo))
-        self.logo = logo_original.subsample(1, 1)
+        self.logo = tk.PhotoImage(file=str(ruta_logo))
         return self.logo
 
     def construir_interfaz(self):
@@ -51,25 +50,21 @@ class LoginView(tk.Frame):
         if logo is not None:
             tk.Label(contenedor, image=logo, bg="#fdfdfd").pack(pady=(0, 12))
 
-        titulo = tk.Label(
+        tk.Label(
             contenedor,
             text="RESTAURANTE\nJALEX",
             bg="#fdfdfd",
             fg="#060e22",
             font=("Arial", 22, "bold")
-        )
+        ).pack(pady=(0, 6))
 
-        titulo.pack(pady=(0, 6))
-
-        subtitulo = tk.Label(
+        tk.Label(
             contenedor,
             text="Inicio de sesión",
             bg="#fdfdfd",
             fg="#516173",
             font=("Arial", 12)
-        )
-
-        subtitulo.pack(pady=(0, 22))
+        ).pack(pady=(0, 22))
 
         tk.Label(
             contenedor,
@@ -127,26 +122,20 @@ class LoginView(tk.Frame):
             pady=(0, 14)
         )
 
-        boton = ttk.Button(
+        ttk.Button(
             contenedor,
             text="Iniciar sesión",
             command=self.iniciar_sesion,
             style="Login.TButton"
-        )
-
-        boton.pack(fill="x")
+        ).pack(fill="x")
 
     def iniciar_sesion(self):
-        assert self.usuario_entry is not None
-        assert self.contrasena_entry is not None
-        assert self.mensaje_error is not None
-
         usuario = self.usuario_entry.get().strip()
         contrasena = self.contrasena_entry.get().strip()
 
         if not usuario or not contrasena:
             self.mensaje_error.config(
-                text="Ingrese usuario y contrasena."
+                text="Ingrese usuario y contraseña."
             )
             return
 
@@ -162,5 +151,4 @@ class LoginView(tk.Frame):
             return
 
         self.mensaje_error.config(text="")
-
         self.al_iniciar_sesion(usuario_validado)
